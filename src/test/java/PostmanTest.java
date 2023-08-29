@@ -5,10 +5,10 @@ import static org.hamcrest.Matchers.equalTo;
 
 public class PostmanTest {
     @Test
-    public void test(){
+    public void testRequestShouldSendData(){
         given()
                 .baseUri("https://postman-echo.com")
-                .body("phone") // отправляемые данные (заголовки и query можно выставлять аналогично)
+                .body("some data") // отправляемые данные (заголовки и query можно выставлять аналогично)
 // Выполняемые действия
                 .when()
                 .post("/post")
